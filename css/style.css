@@ -1,0 +1,141 @@
+/* ===== Variabler (se STYLEGUIDE.md) ===== */
+:root {
+    --color-dark: #1e2a38;
+    --color-dark-2: #2a394b;
+    --color-bg: #f4f6f8;
+    --color-white: #ffffff;
+    --color-accent: #ff7a59;
+    --color-muted: #5b6775;
+    --color-valid: #2e9e5b;
+    --color-invalid: #d64545;
+
+    --font-heading: "Poppins", sans-serif;
+    --font-body: "Inter", sans-serif;
+
+    --space-s: 0.5rem;
+    --space-m: 1rem;
+    --space-l: 2rem;
+    --radius: 8px;
+    --max-width: 1100px;
+}
+
+/* ===== Global grund ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-dark);
+    background-color: var(--color-bg);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    margin: 0 0 var(--space-m);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.15rem;
+}
+
+p {
+    margin: 0 0 var(--space-m);
+}
+
+a {
+    color: var(--color-accent);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== Layout ===== */
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-m);
+}
+
+main {
+    padding-top: var(--space-l);
+    padding-bottom: var(--space-l);
+}
+
+section {
+    margin-bottom: var(--space-l);
+}
+
+/* ===== Komponenter ===== */
+.btn {
+    display: inline-block;
+    padding: var(--space-s) var(--space-m);
+    border-radius: var(--radius);
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hero {
+    padding: var(--space-l) 0;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-m);
+}
+
+.service {
+    background-color: var(--color-white);
+    border-radius: var(--radius);
+    padding: var(--space-m);
+}
+
+.site-footer {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: var(--space-m) 0;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* ===== Desktop ===== */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2.75rem;
+    }
+
+    .hero {
+        padding: 4rem 0;
+        max-width: 700px;
+    }
+
+    .services {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
